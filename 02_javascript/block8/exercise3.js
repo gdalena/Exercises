@@ -1,4 +1,5 @@
-var obj = {};
+/*var obj = {};
+
 function tally(arr){
  var arr = [], count = 0;
  function rec(arr){
@@ -10,7 +11,7 @@ if(count < arr.length-1){
 }
 	rec(arr);
 return obj;
-}
+}*/
 
 module.exports = {
     tally

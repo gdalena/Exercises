@@ -1,28 +1,68 @@
-/*var currenciesDB = [];
-var result = []; 
-var count = 0;
+/* var indexGenre = DB.findIndex(function(e){
+        return e.genre===genreType;
+    });
 
-function dinamicConverter(action, arr, e) {
-	if(action == 'add'){
-		function index() {
-			for(var ele of arr){
-				 return indexOf(ele) == -1
-			}
-		}
-		if(currenciesDB.findIndex(index)){
+dinamicConverter('add', ['euro',1.2]),1)
+    */
+var currenciesDB = [], index = 0, result; 
+function dinamicConverter(action, arr) {
+var count = 0, arr2, result; 
+	if(!currenciesDB){
+		if(action == 'add'){
 			currenciesDB.push(arr)
-			count++
-		return count
-		}	else {
-		return "invalid data provided!"
+			result = currenciesDB.length
 		}
-	} else if(action =='convert'){
-		for(var ele in currenciesDB){
-			if(ele[0] == arr[0]){
-			return (ele[1]/arr[1])*100
+	} else	{
+		if(action == 'add'){
+			for(var ele of currenciesDB){
+				for(var e of ele){
+					if(e === arr[0]){
+						result = "invalid data provided!"
+					} else {
+						currenciesDB.push(arr)
+						result = currenciesDB.length
+					}
+				}
+			}
+		} else if(action =='convert'){
+			for(var ele of currenciesDB){
+				if(ele[0] !== arr[0]){
+					result = (ele[1]/arr[1])*100
+				} else {
+					result = "invalid data provided!"
+				}
 			}
 		}
 	}
+	return result 
+}
+
+
+
+/*var currenciesDB = [], result = [], index = 0;
+function dinamicConverter(action, arr) {
+var count = 0, arr2, result; 
+	if(action == 'add'){
+for(var ele of currenciesDB){
+ var currency = ele
+}
+		var index = currenciesDB.findIndex(currency => currency === [arr]);
+		if(index === -1){
+			currenciesDB.push(arr)
+			result = currenciesDB.length
+		} else {
+			result = "invalid data provided!"
+		}	
+	} else if(action =='convert'){
+		for(var ele of currenciesDB){
+			if(ele[0] !== arr[0]){
+			result = (ele[1]/arr[1])*100
+			} else {
+				result = "invalid data provided!"
+			}
+		}
+	}
+	return result 
 }*/
 
 module.exports ={

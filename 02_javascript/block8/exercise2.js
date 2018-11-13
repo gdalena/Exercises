@@ -2,35 +2,21 @@ var arr =[{name:'mike', age:22},{name:'robert', age:12},{name:'roger', age:44},{
  
 var arr2 = []
 function recursive(arr){
- var count = 0;
+ var count = 0
 function rec(arr){
-		if(count < arr.length-1){
-			count++;
-		var [ele] = arr
-		var {name} = ele
-		var {age} = ele
-		var array = [[name],[age]]
-		arr2.push(array)
-			rec(arr);
-	}
-}
+	for(var ele of arr){
+			obj2 = ele.name
+			obj3 = ele.age
+			for(var key in ele){
+				var array = [obj2, obj3];
+			}
 
-	rec(arr);
+			arr2.push(array)
+    }
+}
+rec(arr);
 return arr2;
 }
-//		var [ele] = arr
-//		var {name} = ele
-//		var {age} = ele
-//		var array = [name, age]
-//		arr2.push(array)
-//
-//	if(num >arr.length){		
-//		console.log(arr2)
-//
-//	} 
-//	return recursive(arr, num -1)
-//	}
-
 
 module.exports = {
     recursive
