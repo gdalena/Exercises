@@ -1,5 +1,5 @@
 
-var bankAccount = {};
+var bankAccount = {}
 
 	bankAccount.withdraw = function(amount) {
 		bankAccount['total'] -= amount;	

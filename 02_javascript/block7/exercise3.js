@@ -1,25 +1,20 @@
-/*
-var account = {};
-account['balance'] = 0
-var balance = 0
+var bankAccount = {};
+var total = 0, amount = 0;
 
-function BankAccount() {
-
-	var withdraw = function(amount) {
-		account['withdraw'] = amount
-		
+var  BankAccount = function (amount) {
+	total = amount
+	this.deposit = function(amount) {
+		total += amount;
+	}
+	this.withdraw = function(amount) {
+		total -= amount;	
 		}
 
-	function deposit(amount) {
-		account['deposit'] = amount
+	this.balance = function() {
+		return total 
 	}
 
-	function account() {
-		account[balance] = account[deposit] - account[withdraw]
-	}
-
-	return account[balance]
-}*/
+}
 
 module.exports = {
     BankAccount

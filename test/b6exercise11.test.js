@@ -7,7 +7,7 @@ describe("#test1", function(){
     })
 })
 describe("#test2", function(){
-    it ('model should be  { name:"jason", id:1  }', function(){
+    it ('model should be  { name:"jason", id:1 }', function(){
         var arrDB = model("add", {id: 1, name: "jason", age: "32", address: "Muntaner 262, Barcelona", married: "to Mary"},schema)
         assert.equal( arrDB[0].name ,'jason')
         assert.equal( arrDB[0].address ,undefined)

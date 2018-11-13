@@ -1,17 +1,17 @@
-/*var obj = {};
+var obj = {};
 function tally(arr){
-	
-	for(i=0; i<arr.length; i++){
-debugger
-		if(arr.includes(arr[i])){
-			var count = 0;
-			count++
-			obj[arr[i]] = count
-		}
+ var arr = [], count = 0;
+ function rec(arr){
+if(count < arr.length-1){
+			count++;
+			arr.push(arr[count]);
+			rec(arr);
 	}
-return obj
 }
-*/
+	rec(arr);
+return obj;
+}
+
 module.exports = {
     tally
 }
