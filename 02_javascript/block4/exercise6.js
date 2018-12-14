@@ -1,10 +1,7 @@
 var arr = [1,2,3,'4','5', {}, 33]
 
 function numberConverter(arr) {
-	var converted = [];
-	var not_converted = [];
-	var res = [];
-	var count = 0, count2;
+	var converted = [], not_converted = [], res = [], count = 0, count2;
 	arr.forEach(function(ele){
 		if(Array.isArray(ele)){
 			count2++
@@ -17,7 +14,6 @@ function numberConverter(arr) {
 		} else if(isNaN(Number(ele))){
 			not_converted.push(ele)
 		}
-		
 		if(not_converted == 0){
 			res =  'no need for conversion'
 		} else {

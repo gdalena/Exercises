@@ -6,7 +6,7 @@ var arr = [
 var max = 44
 
 function uniqueElements(arr){
-    var unique_array = []
+    var unique_array = [];
     for(i = 0;i < arr.length; i++){
         if((unique_array.includes(arr[i]) != true) && (typeof arr[i] === 'number') && (arr[i] >= max)){
             unique_array.push(arr[i])
