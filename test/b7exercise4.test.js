@@ -6,7 +6,7 @@ describe("#test1", function(){
     it ('Universe should be a function', function(){
         assert.typeOf(Universe,  'function')
     })
-})
+}) 
 describe("#test2", function(){
     it ('matter and universe total should be 0 if no initial value is added', function(){
         var universe = new Universe()

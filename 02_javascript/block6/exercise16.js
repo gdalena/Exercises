@@ -1,11 +1,27 @@
 var obj = {a: 1, b: 20, c: 3, d: 4, e: 1, f: 4}
 
-function sort(obj, element, type) {
+const sort = (obj, by, order) => {
+    let sortAction = order+by
+    let arr = [];
+    for (let key in obj) {
+        arr.push([key, obj[key]]);
+    }
+    let sorter = {
+        ascendingvalues  : ( ) => arr.sort((a, b) =>  a[1] - b[1]),
+        descendingvalues : ( ) => arr.sort((a, b) =>  b[1] - a[1]),
+        ascendingkeys    : ( ) => arr.sort(),
+        descendingkeys   : ( ) => arr.sort().reverse()
+    }
+    sorter[sortAction]()
+    let newObj = {}
+    arr.forEach(ele => newObj[ele[0]] = ele[1])
+    return newObj;
+}
+
+/*function sort(obj, element, type) {
 	var arr = [];
 	var obj2 = {};
 	var arr2 = [];
-	var arr3 = [];
-	var arr4 = [];
 	var result = [];
 	for(var key in obj){
 		arr = Object.keys(obj)
@@ -52,7 +68,7 @@ function sort(obj, element, type) {
 	}
 	return obj2
 	
-}
+}*/
 
 
 module.exports ={

@@ -4,7 +4,7 @@
 
 dinamicConverter('add', ['euro',1.2]),1)
     */
-var currenciesDB = [], index = 0, result; 
+/*var currenciesDB = [], index = 0, result; 
 function dinamicConverter(action, arr) {
 var count = 0, arr2, result; 
 	if(!currenciesDB){
@@ -35,7 +35,7 @@ var count = 0, arr2, result;
 		}
 	}
 	return result 
-}
+}*/
 
 
 

@@ -1,6 +1,5 @@
 var str = "Antonello sanna";
 
-var fullName = [];
 function shortener(str) {
 	str = str.split([' '[0]])
 	var name = str[0];
@@ -14,6 +13,11 @@ function shortener(str) {
 
 	return name2 + ' ' + lastName2		
 	}
+
+/*const shortener = str => {
+	let word = str.split(' ');
+	return word[0] + ' ' + word[1][0].toUpperCase() + '.'; 
+};*/
 	
 module.exports = {
     shortener

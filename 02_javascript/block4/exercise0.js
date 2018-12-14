@@ -7,6 +7,8 @@ if (arr == [ ] || arr == undefined || arr == false || arr== null || arr == 0) {
 }
 }
 
+/*const isTrue = val => val ? true : false;*/
+
 module.exports = {
     isTrue
 }

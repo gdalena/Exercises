@@ -1,8 +1,7 @@
 var str = 'hello, how are you today? I am not bad and you?'
-var result = []
 
 function checker(str) {
-	var count= 0, count2=0;
+	var result = [], count= 0, count2=0;
 	for(i=0; i < str.length; i++){
 		if(str[i] ==='?') count2++;
 		else if(str[i] ===',') count++;

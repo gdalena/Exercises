@@ -1,6 +1,18 @@
 var obj = {a: 1, b: 2, c: 2}
 
-function splice(obj, num, num2) {
+const splice = (obj, start, end) =>{
+    let newObj = {}, count = 0;
+    for(let key in obj){
+		count ++;
+		count <= end && count >start ? newObj[key] = obj[key] : null
+		start === end ? 
+			count-1 === end ? newObj[key] = obj[key] : null
+	    : null
+		}
+    return newObj;
+}
+
+/*function splice(obj, num, num2) {
 	var arr = [];
 	var obj2 = {};
 	var arr2 = [];
@@ -21,7 +33,7 @@ function splice(obj, num, num2) {
 		obj2[arr3[i]] = arr4[i]	
 	}
 	return obj2
-}
+}*/
 
 module.exports ={
     splice

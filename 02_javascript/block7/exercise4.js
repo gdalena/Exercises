@@ -1,4 +1,4 @@
-
+/*
  var amount = 0, total = 0;
 
 var Universe = function() {
@@ -35,7 +35,7 @@ var Universe = function() {
 
 return result
 
-}
+}*/
 
 module.exports = {
     Universe

@@ -1,4 +1,18 @@
 var obj = {start: 20, end: 26, step: 3}
+/*const runOnRange = obj => {
+    const arr = [];
+    let { start, end, step } = obj;
+	if (!step) return arr;
+	if (start > end && step < 1) {
+	 	for (let i = start; i >= end; i+=step){
+        	arr.push(i);
+    	};
+    };
+    for (let i = start; i <= end; i+=step){
+        arr.push(i);
+    };
+    return arr;
+};*/
 
 function runOnRange(obj) {
 	var arr = [];
